@@ -16,7 +16,7 @@ function Contact() {
           <div className="contact-info">
             <h3>Get in Touch</h3>
             <p>
-              📧 Email: <a href="mailto:you@example.com">you@example.com</a>
+              📧 Email: <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">mdmainuddin1289@gmail.com</a>
             </p>
             <p>📱 Phone: +91 6207086776</p>
             <p>

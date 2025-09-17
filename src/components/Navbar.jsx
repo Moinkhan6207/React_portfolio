@@ -32,6 +32,9 @@ function Navbar() {
           <li>
             <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           </li>
+          <li>
+            <Link to="/feedback" onClick={() => setIsOpen(false)}>Feedback</Link>
+          </li>
         </ul>
       </div>
     </nav>
