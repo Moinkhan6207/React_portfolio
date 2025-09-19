@@ -6,6 +6,7 @@ function ChatBot() {
         { sender: "bot", text: "Hi 👋, Want to know about me?" },
     ]);
     const [input, setInput] = useState("");
+    const [isOpen, setIsOpen] = useState(true); // 👈 chatbot ko open/close karne ke liye
 
     const handleSend = () => {
         if (!input.trim()) return;
@@ -14,7 +15,6 @@ function ChatBot() {
         setMessages((prev) => [...prev, userMessage]);
 
         let reply = "";
-
         const lower = input.toLowerCase();
 
         if (lower.includes("who are you")) {
@@ -31,12 +31,25 @@ function ChatBot() {
 
         const botMessage = { sender: "bot", text: reply };
         setMessages((prev) => [...prev, botMessage]);
-
         setInput("");
     };
 
+    if (!isOpen) {
+        return (
+            <button className="chatbot-toggle" onClick={() => setIsOpen(true)}>
+                💬 Chat
+            </button>
+        );
+    }
+
     return (
         <div className="chatbot">
+            {/* Close Button */}
+            <div className="chatbot-header">
+                <span>ChatBot</span>
+                <button className="close-btn" onClick={() => setIsOpen(false)}>❌</button>
+            </div>
+
             <div className="chat-window">
                 {messages.map((msg, index) => (
                     <div key={index} className={`message ${msg.sender}`}>
@@ -44,6 +57,7 @@ function ChatBot() {
                     </div>
                 ))}
             </div>
+
             <div className="chat-input">
                 <input
                     type="text"

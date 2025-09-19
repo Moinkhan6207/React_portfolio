@@ -1,15 +1,7 @@
-/* ✅ HERO SECTION */
+/* ================= HERO SECTION ================= */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #ff512f, #dd2476);
-  /* background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); */
-
-
-
-
-
-
-  /* 👈 professional dark gradient */
+  background: linear-gradient(135deg, #0f2027, #2c5364, #203a43);
   color: #fff;
   display: flex;
   align-items: center;
@@ -24,6 +16,7 @@
   max-width: 1200px;
   margin: auto;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .hero-left {
@@ -34,6 +27,7 @@
 
 .hero-right {
   flex: 2;
+  min-width: 280px;
 }
 
 .hero h1 {
@@ -60,7 +54,7 @@
   opacity: 0.9;
 }
 
-/* ✅ IMAGE */
+/* IMAGE */
 .hero-img {
   width: 320px;
   height: 340px;
@@ -75,11 +69,12 @@
   transform: scale(1.08);
 }
 
-/* ✅ BUTTONS */
+/* BUTTONS */
 .hero-buttons {
   margin-top: 25px;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -95,31 +90,24 @@
 
 .btn:hover {
   transform: scale(1.07);
+  box-shadow: 0 0 15px rgba(255, 106, 0, 0.8);
   background: linear-gradient(135deg, #ee0979, #ff6a00);
 }
 
-
-/* ✅ SKILLS SECTION */
+/* ================= SKILLS SECTION ================= */
 .skills {
   padding: 80px 20px;
   text-align: center;
-
-  /* ✅ Attractive Gradient Background */
   background: linear-gradient(135deg, #6a11cb, #2575fc);
-
-  /* ✅ Text ko white kar diya taki readable ho */
   color: #fff;
-
-  /* ✅ Extra Styling for feel */
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-
 .skills h2 {
   font-size: 2rem;
   margin-bottom: 15px;
-  color: black;
+  color: #ffea00;
 }
 
 .skills-icons {
@@ -144,7 +132,7 @@
   transform: translateY(-5px);
 }
 
-/* ✅ PROJECTS SECTION */
+/* ================= PROJECTS SECTION ================= */
 .projects-preview {
   padding: 80px 20px;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -160,13 +148,13 @@
 }
 
 .project-card {
-  background: rgba(255, 0, 0, 0.771);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s;
-
 }
 
 .project-card:hover {
@@ -186,12 +174,12 @@
   font-weight: bold;
 }
 
-/* ✅ ACHIEVEMENTS */
+/* ================= ACHIEVEMENTS ================= */
 .achievements {
   padding: 80px 20px;
   text-align: center;
-  background: #0499ea;
-  color: black;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
 }
 
 .stats {
@@ -210,7 +198,7 @@
   font-weight: bold;
 }
 
-/* ✅ CTA */
+/* ================= CTA ================= */
 .cta {
   padding: 70px 20px;
   text-align: center;
@@ -223,7 +211,7 @@
   margin-bottom: 20px;
 }
 
-/* ✅ ANIMATIONS */
+/* ================= ANIMATIONS ================= */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -245,5 +233,81 @@
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: unset;
+  }
+
+  .hero-img {
+    width: 280px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .tagline {
+    font-size: 1.2rem;
+  }
+
+  .hero .intro {
+    font-size: 1rem;
+  }
+
+  .skills h2 {
+    font-size: 1.8rem;
+  }
+
+  .achievements {
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .tagline {
+    font-size: 1rem;
+  }
+
+  .hero .intro {
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    width: 220px;
+    height: 240px;
+  }
+
+  .skills-icons span {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .projects-grid {
+    gap: 15px;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .cta h2 {
+    font-size: 1.5rem;
   }
 }

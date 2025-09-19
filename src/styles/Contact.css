@@ -93,3 +93,55 @@
 .contact-form button:hover {
   background-color: #ad1457;
 }
+
+/* Already given styles ko keep rakhenge, sirf niche responsive add karenge */
+
+/* 📱 Tablets */
+@media (max-width: 992px) {
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .contact-container h2 {
+    font-size: 2rem;
+    /* Heading thoda chota */
+  }
+
+  .contact-container p {
+    font-size: 1rem;
+    /* Paragraph thoda chota */
+    margin-bottom: 25px;
+  }
+
+  .contact-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .contact-form button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}

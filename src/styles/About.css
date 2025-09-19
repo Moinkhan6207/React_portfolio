@@ -69,6 +69,8 @@
 .about-buttons {
   margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
+  /* ✅ Update */
   gap: 15px;
 }
 
@@ -139,6 +141,10 @@
   padding: 20px;
   border-radius: 10px;
   position: relative;
+  max-width: 90%;
+  /* ✅ Update */
+  max-height: 90%;
+  /* ✅ Update */
 }
 
 .close-btn {
@@ -151,4 +157,68 @@
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
+}
+
+/* ✅ Responsive Design */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-buttons {
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .about {
+    padding: 50px 15px;
+  }
+
+  .about-image .profile-pic {
+    width: 200px;
+    /* ✅ Update */
+    height: 200px;
+    /* ✅ Update */
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+    /* ✅ Update */
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    /* ✅ Update */
+  }
+
+  .info-badges span {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .about-buttons {
+    flex-direction: column;
+    /* ✅ Update */
+    gap: 10px;
+  }
+
+  .video-content video {
+    width: 100%;
+    /* ✅ Update */
+    height: auto;
+  }
 }

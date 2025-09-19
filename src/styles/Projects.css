@@ -1,6 +1,8 @@
+/* ================= PROJECTS SECTION ================= */
 .projects {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
   min-height: 100vh;
 }
 
@@ -12,7 +14,7 @@
 
 .projects-container h2 {
   font-size: 2.8rem;
-  color: #1565c0;
+  color: #ffea00;
   margin-bottom: 15px;
   font-weight: bold;
   animation: fadeIn 1.2s ease-in-out;
@@ -20,52 +22,53 @@
 
 .projects-container p {
   font-size: 1.2rem;
-  color: #444;
+  color: #f1f1f1;
   margin-bottom: 50px;
   line-height: 1.6;
 }
 
+/* ================= PROJECT GRID ================= */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-/* ✅ Project Card */
+/* ================= PROJECT CARD ================= */
 .project-card {
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
   padding: 25px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
   overflow: hidden;
 }
 
 .project-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .project-card h3 {
   font-size: 1.6rem;
-  color: #0d47a1;
+  color: #ffea00;
   margin-bottom: 12px;
 }
 
 .project-card p {
   font-size: 1rem;
-  color: #555;
+  color: #f1f1f1;
   margin-bottom: 20px;
   line-height: 1.5;
 }
 
-/* ✅ Button Styling */
+/* ================= BUTTON ================= */
 .project-card a {
   display: inline-block;
   padding: 12px 20px;
-  background: linear-gradient(135deg, #1565c0, #0d47a1);
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -74,12 +77,12 @@
 }
 
 .project-card a:hover {
-  background: linear-gradient(135deg, #0d47a1, #1565c0);
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
   transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* ✅ Animation */
+/* ================= ANIMATIONS ================= */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -89,5 +92,52 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+@media (max-width: 1024px) {
+  .projects-container h2 {
+    font-size: 2.4rem;
+  }
+
+  .projects-container p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .projects-container p {
+    font-size: 1rem;
+  }
+
+  .projects-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .projects-container p {
+    font-size: 0.95rem;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .project-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
   }
 }

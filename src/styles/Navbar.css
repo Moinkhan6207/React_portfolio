@@ -5,6 +5,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .nav-container {
@@ -13,6 +14,8 @@
   align-items: center;
   max-width: 1100px;
   margin: 0 auto;
+  flex-wrap: wrap;
+  /* tablet ke liye adjust hoga */
 }
 
 /* Logo */
@@ -21,6 +24,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
+  flex: 1;
 }
 
 /* Menu */
@@ -28,6 +32,7 @@
   list-style: none;
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .nav-menu li a {
@@ -49,7 +54,17 @@
   cursor: pointer;
 }
 
-/* Responsive */
+/* Tablet & Mobile Responsive */
+@media (max-width: 992px) {
+  .nav-container {
+    flex-wrap: nowrap;
+  }
+
+  .nav-menu {
+    gap: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
@@ -73,5 +88,16 @@
 
   .nav-menu li {
     margin: 10px 0;
+  }
+}
+
+/* Extra Small Devices (Mobile < 480px) */
+@media (max-width: 480px) {
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-menu li a {
+    font-size: 0.95rem;
   }
 }
