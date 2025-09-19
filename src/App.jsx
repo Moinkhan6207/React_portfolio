@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Feedback from "./pages/Feedback";
+import ChartBot from "./pages/ChatBot"
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/feedback" element={<Feedback />} />
+          <Route path="/chartbot" element={<ChartBot />} />
+
         </Routes>
       </main>
 

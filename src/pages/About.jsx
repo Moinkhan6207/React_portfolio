@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import me from "../imgs/inst2.jpeg";
 import res from "../imgs/resume.pdf";
-// import vid from "../videos/demo.mp4";  // <-- apna video file imgs folder me rakho
 import "../styles/About.css";
 
 function About() {
@@ -41,7 +41,8 @@ function About() {
 
           {/* ✅ Buttons */}
           <div className="about-buttons">
-            <a href="/projects" className="view-work-btn">View My Project</a>
+            {/* <a href="/projects" className="view-work-btn">View My Project</a> */}
+            <Link to="/projects" className="view-work-btn">View My Projects</Link>
             <a href={res} className="resume-btn" target="_blank">Download CV</a>
             <button className="video-btn" onClick={() => setShowVideo(true)}>
               ▶ Watch Demo

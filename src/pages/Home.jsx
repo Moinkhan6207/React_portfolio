@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import home from "../imgs/inst1.jpeg";
 import Ai from "../imgs/Ai_image.webp";
 import "../styles/Home.css";
@@ -34,7 +35,7 @@ function Home() {
               on clean UI and scalable solutions.
             </p>
             <div className="hero-buttons">
-              <a href="Projects" className="btn">View My Projects</a>
+              <Link to="/projects" className="btn">View My Projects</Link>
             </div>
           </div>
         </div>
@@ -68,7 +69,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <a href="/projects" className="btn">See More Projects →</a>
+        <Link to="/projects" className="btn">View My Projects</Link>
       </section>
 
       {/* ✅ Achievements Section */}
@@ -84,7 +85,8 @@ function Home() {
       {/* ✅ Call To Action */}
       <section className="cta">
         <h2>Interested in working together?</h2>
-        <a href="/contact" className="btn">Contact Me</a>
+        {/* <a href="/contact" className="btn">Contact Me</a> */}
+        <Link to="/Contact" className="btn">View My Contact</Link>
       </section>
     </div>
   );

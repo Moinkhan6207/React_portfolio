@@ -35,6 +35,9 @@ function Navbar() {
           <li>
             <Link to="/feedback" onClick={() => setIsOpen(false)}>Feedback</Link>
           </li>
+          <li>
+            <Link to="/chartbot" onClick={() => setIsOpen(false)}>ChartBot</Link>
+          </li>
         </ul>
       </div>
     </nav>
